@@ -1,1 +1,2 @@
-descubrimiento: eliminar interfaces que ya no existen en el equipo (túneles IPsec borrados…)
+ficha de equipo: cabecera con datos clave y métricas por pestañas (rendimiento, interfaces, VPN, usuarios…)
+FortiGate: usuarios locales y administradores con su doble factor (métricas y ficha)
