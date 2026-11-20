@@ -1,0 +1,102 @@
+# FabricView · despliegue (producción).
+# En el servidor: `docker compose pull && docker compose up -d` (o scripts/update.sh).
+# En desarrollo se combina con compose.dev.yml (ver Makefile: `make dev`).
+name: fabricview
+
+x-backend: &backend
+  image: ${FABRIC_REGISTRY:-ghcr.io/tapionsky}/fabricview-backend:${FABRIC_VERSION:-latest}
+  build:
+    context: ./backend
+    target: runtime
+    args:
+      FABRIC_VERSION: ${FABRIC_VERSION:-0.1.0-dev}
+  restart: unless-stopped
+  env_file: .env
+  environment:
+    POSTGRES_HOST: db
+    TZ: ${TZ:-Europe/Madrid}
+  logging: &logging
+    driver: json-file
+    options: { max-size: "10m", max-file: "5" }
+
+services:
+  db:
+    image: timescale/timescaledb:latest-pg17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-fabricview}
+      POSTGRES_USER: ${POSTGRES_USER:-fabricview}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Define POSTGRES_PASSWORD en .env}
+      TZ: ${TZ:-Europe/Madrid}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    shm_size: 256mb
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    logging: *logging
+
+  api:
+    <<: *backend
+    command: ["api"]
+    # Carpeta compartida con el actualizador del servidor (botón «Actualizar»; ver scripts/updater.sh).
+    volumes:
+      - ./.control:/control
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=4).status == 200 else 1)"]
+      interval: 15s
+      timeout: 5s
+      start_period: 60s
+      retries: 5
+    depends_on:
+      db: { condition: service_healthy }
+
+  collector:
+    <<: *backend
+    command: ["collector"]
+    healthcheck: { disable: true }
+    depends_on:
+      api: { condition: service_healthy }
+
+  notifier:
+    <<: *backend
+    command: ["notifier"]
+    healthcheck: { disable: true }
+    depends_on:
+      api: { condition: service_healthy }
+
+  frontend:
+    image: ${FABRIC_REGISTRY:-ghcr.io/tapionsky}/fabricview-frontend:${FABRIC_VERSION:-latest}
+    build:
+      context: ./frontend
+      args:
+        FABRIC_VERSION: ${FABRIC_VERSION:-0.1.0-dev}
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ:-Europe/Madrid}
+    depends_on:
+      api: { condition: service_healthy }
+    logging: *logging
+
+  proxy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "${FABRIC_HTTP_PORT:-80}:80"
+      - "${FABRIC_HTTPS_PORT:-443}:443"
+    environment:
+      FABRIC_SITE_ADDRESS: ${FABRIC_SITE_ADDRESS:-:80}
+      FABRIC_TLS: ${FABRIC_TLS:-internal}
+    volumes:
+      - ./deploy/${FABRIC_CADDYFILE:-Caddyfile}:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on: [api, frontend]
+    logging: *logging
+
+volumes:
+  db-data:
+  caddy-data:
+  caddy-config:

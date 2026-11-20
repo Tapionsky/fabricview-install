@@ -1,0 +1,25 @@
+# Proxy por HTTP (red de gestión interna). Para HTTPS usa Caddyfile.https
+# (FABRIC_CADDYFILE=Caddyfile.https en .env).
+{
+	admin off
+}
+
+(fabricview) {
+	encode zstd gzip
+	header {
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy strict-origin-when-cross-origin
+		-Server
+	}
+	handle /api/* {
+		reverse_proxy api:8000
+	}
+	handle {
+		reverse_proxy frontend:3000
+	}
+}
+
+{$FABRIC_SITE_ADDRESS::80} {
+	import fabricview
+}

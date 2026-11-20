@@ -1,0 +1,31 @@
+# Proxy con HTTPS. En .env:
+#   FABRIC_CADDYFILE=Caddyfile.https
+#   FABRIC_SITE_ADDRESS=fabricview.midominio.local   (nombre DNS o IP por el que se accede)
+#   FABRIC_TLS=internal        → certificado de la CA interna de Caddy (red privada)
+#   FABRIC_TLS=tu@correo.es    → certificado público Let's Encrypt (requiere DNS público y puerto 80/443 accesibles)
+# HTTP redirige automáticamente a HTTPS.
+{
+	admin off
+}
+
+(fabricview) {
+	encode zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy strict-origin-when-cross-origin
+		-Server
+	}
+	handle /api/* {
+		reverse_proxy api:8000
+	}
+	handle {
+		reverse_proxy frontend:3000
+	}
+}
+
+{$FABRIC_SITE_ADDRESS} {
+	tls {$FABRIC_TLS}
+	import fabricview
+}
