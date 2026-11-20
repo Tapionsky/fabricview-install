@@ -1,3 +1,1 @@
-topología: mapa interactivo con enlaces coloreados por carga, búsqueda, filtros y exportación
-topología: API del mapa por capas con estado y utilización de cada enlace
-topología: descubrimiento de enlaces y vecinos (FortiLink, LLDP, tabla MAC, inventario)
+actualizaciones: «Buscar actualizaciones» muestra la versión nueva sin recargar

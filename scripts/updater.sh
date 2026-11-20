@@ -198,8 +198,9 @@ cmd_process() {
     cmd_update "$INBOX/update.json"
   fi
   if [[ -f "$INBOX/check.json" ]]; then
+    # La petición se borra al terminar: mientras existe, la web sabe que la comprobación sigue en marcha.
+    cmd_check || true
     rm -f "$INBOX/check.json"
-    cmd_check
   fi
   find "$INBOX" -mindepth 1 -maxdepth 1 ! -name update.json ! -name check.json ! -name '.req-*' -exec rm -rf {} + 2>/dev/null || true
 }
