@@ -1,2 +1,4 @@
-ficha de switch y AP: pestañas Puertos, Sistema, Transceptores, Alertas de red, Clientes wifi y Radios
-FortiSwitch y FortiAP: hardware, transceptores, puertos, radios y recuento de clientes
+Certificado HTTPS: subir PFX/PEM de la empresa, CA interna o Let's Encrypt desde Sistema
+Notificaciones (SMTP y Telegram) e inicio de sesión con LDAP / Active Directory
+Usuarios y acceso: gestión de usuarios y registro de actividad
+barra lateral agrupada: Monitorización y Administración, secciones por rol y contador de caídos

@@ -1,7 +1,10 @@
 # Proxy por HTTP (red de gestión interna). Para HTTPS usa Caddyfile.https
 # (FABRIC_CADDYFILE=Caddyfile.https en .env).
 {
-	admin off
+	# Solo la API de FabricView llega a este socket (volumen «proxy» compartido): así puede
+	# cargar el certificado HTTPS que se sube desde Sistema › Certificado HTTPS.
+	admin unix//proxy/admin.sock|0666
+	grace_period 10s
 }
 
 (fabricview) {
