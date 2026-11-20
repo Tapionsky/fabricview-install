@@ -1,1 +1,1 @@
-topología: ocultar tipos de equipo del mapa (impresoras, cámaras…) y «Solo infraestructura»
+descubrimiento: eliminar interfaces que ya no existen en el equipo (túneles IPsec borrados…)
