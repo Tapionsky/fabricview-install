@@ -1,1 +1,1 @@
-actualizaciones: «Buscar actualizaciones» muestra la versión nueva sin recargar
+topología: ocultar tipos de equipo del mapa (impresoras, cámaras…) y «Solo infraestructura»
