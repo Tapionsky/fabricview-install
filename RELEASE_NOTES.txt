@@ -1,2 +1,2 @@
-ficha del FortiGate: pestañas Sistema y Licencias
-FortiGate: licencias, certificados, firmware disponible, HA, sensores y último reinicio
+ficha de switch y AP: pestañas Puertos, Sistema, Transceptores, Alertas de red, Clientes wifi y Radios
+FortiSwitch y FortiAP: hardware, transceptores, puertos, radios y recuento de clientes
