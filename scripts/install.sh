@@ -151,7 +151,7 @@ main() {
   if [[ -n "$pass" ]]; then
     echo "  Usuario:               ${email}"
     echo "  Contraseña:            ${pass}"
-    echo "  (cámbiala al entrar; no se volverá a mostrar)"
+    echo "  (cámbiala en «Mi cuenta» al entrar; no se volverá a mostrar)"
   elif [[ $fresh -eq 1 ]]; then  # p. ej. FABRIC_ADMIN_PASSWORD fijada a mano en .env
     echo "  Contraseña inicial:    sudo -u ${SVC_USER} docker compose -f ${DIR}/docker-compose.yml logs api | grep -A1 'Administrador inicial'"
   fi

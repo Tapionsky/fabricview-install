@@ -1,3 +1,2 @@
-instalador de un comando y repositorio público de instalación (versión 0.3.0)
-interfaz: licencia en Ajustes, avisos y equipos «Sin licencia»
-licencias: gratis hasta 10 equipos y códigos de suscripción firmados
+imagen del frontend: compilar sin emulación QEMU (fallaba en arm64)
+cuenta: cambio de contraseña y verificación en dos pasos (Authenticator)

@@ -28,6 +28,19 @@ Opciones (todas opcionales), añadiéndolas antes de `bash`:
 
 Ejemplo: `curl -fsSL …/install.sh | sudo FV_PORT=8080 FV_COMPANY="Acme" bash`
 
+## Tu cuenta
+
+Cambia la contraseña inicial y activa la **verificación en dos pasos** (Google o Microsoft
+Authenticator, 1Password…) en **Mi cuenta**, en el menú del usuario (arriba a la derecha).
+
+Si se pierde la contraseña o el móvil, desde la consola del servidor:
+
+```bash
+cd /opt/fabricview
+sudo -u fabricview docker compose exec api fabricview reset-password admin@fabricview.local
+sudo -u fabricview docker compose exec api fabricview reset-2fa admin@fabricview.local
+```
+
 ## Plan gratuito y licencia
 
 FabricView es gratuito hasta **10 equipos** (cada FortiGate, FortiSwitch y FortiAP cuenta como uno).
