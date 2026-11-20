@@ -1,2 +1,3 @@
-imagen del frontend: compilar sin emulación QEMU (fallaba en arm64)
-cuenta: cambio de contraseña y verificación en dos pasos (Authenticator)
+topología: mapa interactivo con enlaces coloreados por carga, búsqueda, filtros y exportación
+topología: API del mapa por capas con estado y utilización de cada enlace
+topología: descubrimiento de enlaces y vecinos (FortiLink, LLDP, tabla MAC, inventario)
