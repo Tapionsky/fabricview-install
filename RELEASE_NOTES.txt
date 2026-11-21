@@ -1,4 +1,1 @@
-Administración › Plantillas: filtro de interfaces e intervalos por tipo de equipo
-Plantillas: filtro de interfaces e intervalo propio por tipo de equipo
-Administración › Plantillas: vista por fabricante y fuente, tipos de equipo, familias e indicadores
-Plantillas por fuente: catálogo con fabricantes y familias, plantillas propias y métricas obligatorias
+Plantillas: los selectores de intervalo por tipo de equipo ya no se solapan en móvil
