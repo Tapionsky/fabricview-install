@@ -1,1 +1,3 @@
-Plantillas: los selectores de intervalo por tipo de equipo ya no se solapan en móvil
+F0 conectores (frontend): diálogo generado por tipo con selector, registro de tipos de equipo y estados off/auth_error
+F0 conectores (backend): tipos de conector con campos propios, destinos internos bloqueados, estados off/auth_error/salud, licencias y KPI por tipo
+Propuesta de conectores Synology (SNMPv3) y vCenter, con las decisiones y dos revisiones adversariales
