@@ -1,14 +1,5 @@
-Docs: estado de F1, F2 y F3, decisiones y aplazados
-F2: correcciones de la revisión adversarial (frontend)
-F2/F3: correcciones de la revisión adversarial (backend)
-F2 vCenter (frontend): fichas de vCenter, host y VM, CA propia en el conector, uso por tipo y topología
-F2/F3 (pruebas): vCenter simulado, licencia en dos pasadas, correlación en la topología y demos borrados
-F3 Correlación: los vecinos LLDP/CDP se dibujan como el equipo gestionado, capa de cómputo y grupos de VM
-F2 vCenter (API): KPI de cómputo y datastores, modo TLS con CA propia y uso de licencia por tipo
-F2 vCenter (núcleo): métricas de cómputo, licencia en dos pasadas para VM, purga de VM y demos que no reaparecen
-F2 vCenter (backend): cliente VI/JSON, conector vCenter 8 beta, vCenter simulado y conector demo
-F1 Synology: correcciones de la revisión adversarial
-F1 Synology (frontend): ficha de NAS con rendimiento, almacenamiento, discos y sistema
-F1 Synology (pruebas): SNMPv3 real contra snmpsim, credenciales malas, tasas e integración con el NAS demo
-F1 Synology (API): métricas de almacenamiento, KPI del volumen más lleno y conector demo del NAS
-F1 Synology (backend): cliente SNMPv3 de solo lectura, conector Synology y NAS de demostración
+Docs: almacenamiento de las VM y pendientes
+Particiones de VM: correcciones de la revisión adversarial
+VM: pestaña Almacenamiento con particiones, VMDK, instantáneas y VMware Tools
+vCenter: particiones del invitado, discos virtuales, instantáneas y estado de VMware Tools
+Recolector: sondear en el primer ciclo aunque la máquina acabe de arrancar
