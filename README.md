@@ -48,7 +48,7 @@ sudo -u fabricview docker compose exec api fabricview reset-2fa admin@fabricview
 ## Plan gratuito y licencia
 
 Vyntralo es gratuito hasta **10 equipos** (cada FortiGate, FortiSwitch y FortiAP cuenta como uno).
-Para monitorizar más, en **Ajustes › Licencia** copia el identificador de tu instalación, envíalo a tu
+Para monitorizar más, en **Sistema › Licencia** copia el identificador de tu instalación, envíalo a tu
 proveedor y pega el código de licencia que te dé.
 
 ## Actualizar

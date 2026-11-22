@@ -156,7 +156,7 @@ main() {
     echo "  Contraseña inicial:    sudo -u ${SVC_USER} docker compose -f ${DIR}/docker-compose.yml logs api | grep -A1 'Administrador inicial'"
   fi
   echo
-  echo "  Plan gratuito: hasta 10 equipos. Para ampliarlo: Ajustes › Licencia."
+  echo "  Plan gratuito: hasta 10 equipos. Para ampliarlo: Sistema › Licencia."
   echo "  Las versiones nuevas se instalan desde la web con el botón «Actualizar»."
   echo "  Copias de seguridad: ${DIR}/backups (antes de cada actualización)."
   echo
