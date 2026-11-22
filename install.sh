@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Instalador de FabricView en un Ubuntu Server limpio (26.04 o 24.04), con un solo comando:
+# Instalador de Vyntralo en un Ubuntu Server limpio (26.04 o 24.04), con un solo comando:
 #
 #   curl -fsSL https://raw.githubusercontent.com/Tapionsky/fabricview-install/main/install.sh | sudo bash
 #
-# Instala Docker, descarga FabricView en /opt/fabricview, genera la configuración con secretos
+# Instala Docker, descarga Vyntralo en /opt/fabricview, genera la configuración con secretos
 # aleatorios, activa el botón «Actualizar» de la web y arranca la última versión publicada.
 # Volver a ejecutarlo es seguro: si ya está instalado, solo lo actualiza.
 #
@@ -32,7 +32,7 @@ main() {
   [[ $EUID -eq 0 ]] || die "Ejecuta el instalador con sudo:  curl -fsSL … | sudo bash"
   [[ -r /etc/os-release ]] || die "No se reconoce el sistema operativo"
   . /etc/os-release
-  [[ "${ID:-}" == "ubuntu" ]] || die "FabricView se instala en Ubuntu Server (detectado: ${PRETTY_NAME:-desconocido})"
+  [[ "${ID:-}" == "ubuntu" ]] || die "Vyntralo se instala en Ubuntu Server (detectado: ${PRETTY_NAME:-desconocido})"
   case "$(dpkg --print-architecture)" in
     amd64 | arm64) ;;
     *) die "Arquitectura no soportada: $(dpkg --print-architecture) (se necesita amd64 o arm64)" ;;
@@ -49,7 +49,7 @@ main() {
   done
 
   echo
-  echo "  ███  FabricView · instalación en ${PRETTY_NAME}"
+  echo "  ███  Vyntralo · instalación en ${PRETTY_NAME}"
   local mem_mb disk_gb
   mem_mb=$(awk '/MemTotal/ {print int($2/1024)}' /proc/meminfo)
   disk_gb=$(df -Pm / | awk 'NR==2 {print int($4/1024)}')
@@ -77,9 +77,9 @@ main() {
     useradd --system --create-home --home-dir "/var/lib/${SVC_USER}" --shell /usr/sbin/nologin "$SVC_USER"
   fi
   usermod -aG docker "$SVC_USER"
-  ok "Sin acceso por consola; solo gestiona FabricView"
+  ok "Sin acceso por consola; solo gestiona Vyntralo"
 
-  say "Descargando FabricView en ${DIR}"
+  say "Descargando Vyntralo en ${DIR}"
   local fresh=1
   if [[ -d "$DIR/.git" ]]; then
     fresh=0
@@ -121,7 +121,7 @@ main() {
     ok "Se conserva la configuración existente (.env)"
   fi
 
-  # Puertos web libres (si ya los usa FabricView, es una reinstalación y no cuenta).
+  # Puertos web libres (si ya los usa Vyntralo, es una reinstalación y no cuenta).
   local p busy=""
   for p in "$(envget FABRIC_HTTP_PORT)" "$(envget FABRIC_HTTPS_PORT)"; do
     [[ -n "$p" ]] || continue
@@ -135,7 +135,7 @@ main() {
   scripts/install-updater.sh >/dev/null || warn "No se pudo instalar el actualizador (sudo ${DIR}/scripts/install-updater.sh)"
   ok "Comprobará cada hora si hay versión nueva"
 
-  say "Arrancando FabricView ${version} (descarga de imágenes: puede tardar unos minutos)"
+  say "Arrancando Vyntralo ${version} (descarga de imágenes: puede tardar unos minutos)"
   as_svc scripts/update.sh "$version" || die "La instalación no ha terminado bien. Revisa: cd ${DIR} && sudo -u ${SVC_USER} docker compose logs --tail 80"
 
   local port ip pass email
@@ -145,7 +145,7 @@ main() {
   pass=$(as_svc docker compose logs --no-color api 2>/dev/null | sed -n 's/.*Contraseña generada:[[:space:]]*\([^[:space:]]*\).*/\1/p' | tail -n1 || true)
 
   echo
-  printf '\033[1;32m  ✔ FabricView %s instalado\033[0m\n\n' "$version"
+  printf '\033[1;32m  ✔ Vyntralo %s instalado\033[0m\n\n' "$version"
   if [[ "$port" == "80" ]]; then echo "  Abre en el navegador:  http://${ip:-IP-del-servidor}"; else echo "  Abre en el navegador:  http://${ip:-IP-del-servidor}:${port}"; fi
   # La contraseña se genera en el primer arranque correcto (puede ser un reintento tras un fallo).
   if [[ -n "$pass" ]]; then

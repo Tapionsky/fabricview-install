@@ -41,7 +41,7 @@ install -d -o "$OWNER" -g 10001 -m 1730 "$DIR/.control/inbox"
 
 cat > /etc/systemd/system/fabricview-updater.path <<UNIT
 [Unit]
-Description=FabricView: peticiones de actualización desde la web
+Description=Vyntralo: peticiones de actualización desde la web
 
 [Path]
 PathExistsGlob=${DIR}/.control/inbox/*.json
@@ -53,7 +53,7 @@ UNIT
 
 cat > /etc/systemd/system/fabricview-updater.service <<UNIT
 [Unit]
-Description=FabricView: procesa peticiones de actualización
+Description=Vyntralo: procesa peticiones de actualización
 After=docker.service network-online.target
 Wants=network-online.target
 
@@ -70,7 +70,7 @@ UNIT
 
 cat > /etc/systemd/system/fabricview-update-check.service <<UNIT
 [Unit]
-Description=FabricView: comprueba si hay versión nueva
+Description=Vyntralo: comprueba si hay versión nueva
 After=docker.service network-online.target
 Wants=network-online.target
 
@@ -87,7 +87,7 @@ UNIT
 
 cat > /etc/systemd/system/fabricview-update-check.timer <<UNIT
 [Unit]
-Description=FabricView: comprobación horaria de versiones
+Description=Vyntralo: comprobación horaria de versiones
 
 [Timer]
 OnBootSec=3min

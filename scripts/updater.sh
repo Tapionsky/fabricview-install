@@ -170,7 +170,7 @@ except ValueError:
   chmod 644 "$CTL/update.log"
   # update.sh anota cada paso en state.json (FV_STATE_FILE) para que la web muestre el progreso.
   if FV_STATE_FILE="$CTL/state.json" bash "$FV_UPDATER_ROOT/scripts/update.sh" "$version" >> "$CTL/update.log" 2>&1; then
-    set_state success "$version" "$from" "FabricView ${version} instalado correctamente" "Completado"
+    set_state success "$version" "$from" "Vyntralo ${version} instalado correctamente" "Completado"
   else
     local msg
     msg=$(grep -E '^(✖|ERROR|Error|La API|No se|Falta|Hay )' "$CTL/update.log" | tail -n1 || true)

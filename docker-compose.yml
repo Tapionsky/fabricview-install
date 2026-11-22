@@ -1,4 +1,4 @@
-# FabricView · despliegue (producción).
+# Vyntralo · despliegue (producción).
 # En el servidor: `docker compose pull && docker compose up -d` (o scripts/update.sh).
 # En desarrollo se combina con compose.dev.yml (ver Makefile: `make dev`).
 name: fabricview
@@ -97,7 +97,7 @@ services:
     environment:
       FABRIC_SITE_ADDRESS: ${FABRIC_SITE_ADDRESS:-:80}
       FABRIC_TLS: ${FABRIC_TLS:-internal}
-    # Arranca con la configuración que dejó FabricView (Sistema › Certificado HTTPS) si existe y es
+    # Arranca con la configuración que dejó Vyntralo (Sistema › Certificado HTTPS) si existe y es
     # válida; si no, con la de la instalación. La API (uid 10001) escribe en /proxy.
     command:
       - sh

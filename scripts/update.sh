@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Actualiza FabricView en el servidor.
+# Actualiza Vyntralo en el servidor.
 #
 #   scripts/update.sh            → última versión publicada (último tag vX.Y.Z)
 #   scripts/update.sh 0.2.0      → versión concreta (también sirve para volver atrás*)
@@ -160,7 +160,7 @@ docker compose up -d --remove-orphans ${UP_FLAGS[@]+"${UP_FLAGS[@]}"} || true
 
 step "Comprobando la API"
 if api_healthy 40 && [[ "$(running_version)" == "$VERSION" ]]; then
-  echo "API sana · FabricView ${VERSION} en marcha"
+  echo "API sana · Vyntralo ${VERSION} en marcha"
   # El proxy y la web no afectan a la API: si no arrancan (p. ej. puerto ocupado) no se vuelve atrás,
   # pero se informa en lugar de dar la actualización por buena en silencio.
   missing=$(services_down proxy frontend)

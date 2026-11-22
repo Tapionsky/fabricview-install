@@ -1,9 +1,3 @@
-Docs: alertas tras la segunda revisión
-Alertas (interfaz): correcciones de la revisión adversarial
-Alertas: intervalo real, cambios de regla sin falsos «resuelta» y liberación de avisos revisada
-Docs: alertas; Notificaciones enlaza con Alertas › Avisos
-Alertas: contadores del menú en su propio módulo, hora sin prerender y ajustes de móvil
-Alertas: página (activas, histórico, reglas, avisos), Resumen, menú y ficha del equipo
-Alertas: correcciones de la revisión adversarial
-Alertas: API (activas, histórico, reconocer, silenciar, reglas, avisos) y pruebas
-Alertas: modelo, reglas predefinidas, motor de evaluación y avisos agrupados
+Textos: FabricView pasa a llamarse Vyntralo (los nombres técnicos no cambian)
+Correo: el remitente por defecto antiguo «FabricView» pasa a «Vyntralo» una sola vez
+Marca Vyntralo: logo «Órbita», favicon, icono de iOS, fuente Sora y color índigo

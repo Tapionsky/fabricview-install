@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Prepara un Ubuntu Server (probado para 24.04 y pensado para 26.04) para ejecutar FabricView:
+# Prepara un Ubuntu Server (probado para 24.04 y pensado para 26.04) para ejecutar Vyntralo:
 # instala Docker Engine + plugin compose desde el repositorio oficial de Docker.
 #
 #   sudo scripts/install-ubuntu.sh

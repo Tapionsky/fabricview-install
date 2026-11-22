@@ -1,8 +1,12 @@
-# FabricView · instalación
+# Vyntralo · instalación
 
 Monitorización de red para FortiGate, FortiSwitch y FortiAP. Este repositorio contiene **solo lo
-necesario para instalar y actualizar FabricView** en un servidor propio; la aplicación se descarga
+necesario para instalar y actualizar Vyntralo** en un servidor propio; la aplicación se descarga
 como imágenes Docker ya compiladas.
+
+> **Antes se llamaba FabricView.** Los nombres técnicos no cambian para no romper las instalaciones:
+> este repositorio (`fabricview-install`), la carpeta `/opt/fabricview`, el usuario de sistema
+> `fabricview` y las imágenes Docker siguen igual.
 
 ## Instalar (un solo comando)
 
@@ -43,7 +47,7 @@ sudo -u fabricview docker compose exec api fabricview reset-2fa admin@fabricview
 
 ## Plan gratuito y licencia
 
-FabricView es gratuito hasta **10 equipos** (cada FortiGate, FortiSwitch y FortiAP cuenta como uno).
+Vyntralo es gratuito hasta **10 equipos** (cada FortiGate, FortiSwitch y FortiAP cuenta como uno).
 Para monitorizar más, en **Ajustes › Licencia** copia el identificador de tu instalación, envíalo a tu
 proveedor y pega el código de licencia que te dé.
 
