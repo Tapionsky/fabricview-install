@@ -1,5 +1,1 @@
-Login a pantalla completa: fondo continuo con órbitas animadas y tarjeta de acceso
-Efectos: cifras que cuentan, estado en vivo, gráficas que se trazan, cargas con brillo, avisos de alertas nuevas y tarjetas que responden
-Contadores del menú: cuándo saltó la alerta activa más reciente
-Navegación: se quita Tráfico (ya está en la ficha de cada FortiGate) y Licencia pasa a ser una pestaña de Sistema
-Textos: Licencia y Notificaciones están en Sistema
+Plantilla de VMware: CPU y memoria de las VM activadas por defecto
