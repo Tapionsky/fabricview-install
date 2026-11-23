@@ -1,1 +1,1 @@
-Alertas con su causa: qué alarma de vCenter, qué apartado de la salud, qué disco
+Túneles IPsec dial-up: sin usuarios conectados no están caídos
