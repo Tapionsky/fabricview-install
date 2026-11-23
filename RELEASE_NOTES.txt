@@ -1,1 +1,4 @@
-Resumen: arrastrar para mover y cambiar el ancho y el alto de los widgets
+Docs: fases 4 y 5 del Resumen personalizable, implementadas
+Resumen: widgets nuevos (gráfica, Top N, túneles/SLA, alarmas vCenter, caducidades) y disposición para todos
+Resumen: correcciones de la revisión en la API de widgets y la disposición predeterminada
+Resumen: API de los widgets añadibles y de la disposición predeterminada
