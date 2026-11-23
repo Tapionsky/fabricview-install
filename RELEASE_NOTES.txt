@@ -1,1 +1,2 @@
-Topología: no se rompe al quedar vacía una capa intermedia
+Resumen: el rango temporal manda en todos los widgets
+Propuesta: Resumen personalizable (fases 1–5)
