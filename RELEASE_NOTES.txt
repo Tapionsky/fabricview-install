@@ -1,1 +1,1 @@
-Resumen personalizable: añadir, quitar, ordenar y cambiar el tamaño de los widgets
+Resumen: arrastrar para mover y cambiar el ancho y el alto de los widgets
