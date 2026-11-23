@@ -1,1 +1,1 @@
-Túneles IPsec dial-up: sin usuarios conectados no están caídos
+Topología: no se rompe al quedar vacía una capa intermedia
