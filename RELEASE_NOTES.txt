@@ -1,1 +1,1 @@
-Plantilla de VMware: CPU y memoria de las VM activadas por defecto
+Alertas con su causa: qué alarma de vCenter, qué apartado de la salud, qué disco
