@@ -23,6 +23,8 @@ services:
   db:
     image: timescale/timescaledb:latest-pg17
     restart: unless-stopped
+    # pg_stat_statements: consultas más costosas en Sistema › Estado del servidor.
+    command: ["postgres", "-c", "shared_preload_libraries=timescaledb,pg_stat_statements", "-c", "pg_stat_statements.track=top"]
     environment:
       POSTGRES_DB: ${POSTGRES_DB:-fabricview}
       POSTGRES_USER: ${POSTGRES_USER:-fabricview}
