@@ -73,6 +73,9 @@ services:
   notifier:
     <<: *backend
     command: ["notifier"]
+    # Solo para medir el disco de la carpeta de instalación (Sistema › Estado del servidor).
+    volumes:
+      - ./.control:/control:ro
     healthcheck: { disable: true }
     depends_on:
       api: { condition: service_healthy }

@@ -1,3 +1,3 @@
-Docs: vigilar el servidor desde Sistema › Estado del servidor
-Sistema › Estado del servidor: diagnóstico, máquina, servicios, recolector y base de datos
-Estado del servidor: latidos de los servicios, estadísticas del recolector y API
+Docs: tendencia y avisos del estado del servidor
+Estado del servidor: gráficas de tendencia (24 h, 7 y 30 días) y previsión de disco
+Estado del servidor (fase 2): historial de 30 días y avisos del propio servidor
