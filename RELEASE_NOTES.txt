@@ -1,3 +1,12 @@
-Docs: tendencia y avisos del estado del servidor
-Estado del servidor: gráficas de tendencia (24 h, 7 y 30 días) y previsión de disco
-Estado del servidor (fase 2): historial de 30 días y avisos del propio servidor
+Docs: VM sin copia (cruce de Veeam con vCenter)
+VM sin copia: pestaña del servidor de copias, indicador de la VM y widget
+Cruce de Veeam con vCenter: VM sin copia y sin copia reciente, con alertas
+Veeam: qué máquinas virtuales protege cada copia y su último punto
+Docs: conector de Veeam Backup & Replication
+Ficha del servidor de copias: resumen, trabajos y repositorios
+Resumen: widgets de copias de seguridad y repositorios
+API: servidores de copias en dispositivos, topología y resumen
+Alertas de copias de seguridad (Veeam)
+Veeam Backup & Replication: conector, métricas y demo
+Dispositivos: filtro de tipo en un desplegable
+Resumen: permitir colocar paneles de distinto tipo uno al lado del otro
