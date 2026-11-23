@@ -1,2 +1,1 @@
-Resumen: el rango temporal manda en todos los widgets
-Propuesta: Resumen personalizable (fases 1–5)
+Resumen personalizable: añadir, quitar, ordenar y cambiar el tamaño de los widgets
