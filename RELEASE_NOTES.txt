@@ -1,4 +1,4 @@
-Docs: dashboards personalizados
-Dashboards: selector en el título del Resumen, página de gestión y acciones
-Disposiciones «explicit» y guardado automático también para dashboards
-Dashboards personalizados: tabla, API y permisos (privados y compartidos)
+Docs: periodo fijo, pantalla completa y auditoría de widgets en dashboards
+Pantalla completa (modo NOC) para el Resumen y los dashboards: ?pantalla=1, reloj, Wake Lock y puntero oculto
+Dashboards: menú «Periodo» al personalizar y barra superior bloqueada con el periodo fijo
+Dashboards: periodo fijo (migración 0019) y auditoría agrupada de cambios de widgets en compartidos
