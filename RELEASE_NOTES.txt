@@ -1,7 +1,5 @@
-Docs: detección por MAC/IP hecha y permisos de Fortinet para la topología
-Topología: fusión por dueño e IP, «se ejecuta en» para las VM gestionadas, margen para la tabla MAC y aviso de por qué un equipo no cuelga de ningún switch
-Fortinet: sitúa en su puerto de acceso los equipos de otros conectores por sus MAC (vmk, VM) o su IP, vistas en la tabla MAC y el inventario
-vCenter: MAC e IP de los vmk de cada host y red de las VM (MAC, host, IP y nombre) para situarlos en la topología
-Docs: barra de filtros de la topología hecha
-Topología: vista rápida (Todo · Infraestructura · Solo red) y menú «Personalizar» con casillas por tipo y fuente en lugar de dos filas de botones
-Docs: propuesta de topología (detección por MAC/IP, filtros y edición del mapa), revisada
+Docs: claves estables y enlaces manuales hechos
+Topología: «Conectar con…», quitar y ocultar enlaces desde el panel y «Personalizar»
+Tests: enlaces manuales y ocultos de la topología
+Topología: claves estables de nodo, enlaces manuales y ocultar enlaces en la API, con auditoría
+Topología: tablas de enlaces manuales y enlaces ocultos (migración 0020)
