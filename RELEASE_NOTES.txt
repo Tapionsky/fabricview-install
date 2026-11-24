@@ -1,12 +1,4 @@
-Docs: VM sin copia (cruce de Veeam con vCenter)
-VM sin copia: pestaña del servidor de copias, indicador de la VM y widget
-Cruce de Veeam con vCenter: VM sin copia y sin copia reciente, con alertas
-Veeam: qué máquinas virtuales protege cada copia y su último punto
-Docs: conector de Veeam Backup & Replication
-Ficha del servidor de copias: resumen, trabajos y repositorios
-Resumen: widgets de copias de seguridad y repositorios
-API: servidores de copias en dispositivos, topología y resumen
-Alertas de copias de seguridad (Veeam)
-Veeam Backup & Replication: conector, métricas y demo
-Dispositivos: filtro de tipo en un desplegable
-Resumen: permitir colocar paneles de distinto tipo uno al lado del otro
+Docs: dashboards personalizados
+Dashboards: selector en el título del Resumen, página de gestión y acciones
+Disposiciones «explicit» y guardado automático también para dashboards
+Dashboards personalizados: tabla, API y permisos (privados y compartidos)
