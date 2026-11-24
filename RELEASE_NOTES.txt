@@ -1,5 +1,6 @@
-Docs: claves estables y enlaces manuales hechos
-Topología: «Conectar con…», quitar y ocultar enlaces desde el panel y «Personalizar»
-Tests: enlaces manuales y ocultos de la topología
-Topología: claves estables de nodo, enlaces manuales y ocultar enlaces en la API, con auditoría
-Topología: tablas de enlaces manuales y enlaces ocultos (migración 0020)
+Docs: orden dentro de la banda hecho
+Topología: «Editar mapa» para ordenar los nodos en su banda (arrastre, teclado y botones en móvil)
+Tests: orden de los nodos de la topología
+Topología: guardar y restablecer el orden de los nodos en su banda, con auditoría agrupada
+Topología: tabla del orden de los nodos dentro de su banda (migración 0021)
+Docs: enlaces manuales publicados en 0.26
