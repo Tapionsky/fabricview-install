@@ -1,4 +1,2 @@
-Docs: periodo fijo, pantalla completa y auditoría de widgets en dashboards
-Pantalla completa (modo NOC) para el Resumen y los dashboards: ?pantalla=1, reloj, Wake Lock y puntero oculto
-Dashboards: menú «Periodo» al personalizar y barra superior bloqueada con el periodo fijo
-Dashboards: periodo fijo (migración 0019) y auditoría agrupada de cambios de widgets en compartidos
+Lint: línea larga en el docstring de dashboards
+Veeam: funciona con el rol Backup Viewer (serverInfo es solo de Backup Administrator) y el 403 incluye el mensaje de Veeam
