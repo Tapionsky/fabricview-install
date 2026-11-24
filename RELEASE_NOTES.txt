@@ -1,3 +1,3 @@
-Docs: rejilla libre del Resumen y los dashboards
-Resumen y dashboards: mover widgets a cualquier columna con vista previa, ajuste al hueco y teclado (←/→)
-Rejilla libre: columna de cada widget (sizes.x), colocación por gravedad y plan de soltar con ajuste de ancho
+Docs: eliminar equipos que ya no aparecen
+Dispositivos: «Ya no aparece», aviso de VM desaparecidas con eliminación en bloque y «Eliminar equipo» en la ficha
+Dispositivos: eliminar equipos que ya no aparecen o llevan más de un día sin responder (uno o varios, auditado, libera licencia)
